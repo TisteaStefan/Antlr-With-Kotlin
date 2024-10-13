@@ -31,10 +31,8 @@ class AlfVisitor : AbstractParseTreeVisitor<AstObject>() , alfVisitor<AstObject>
                 instructions.add(visit(instruction))
            
         }
-        //TODO: créez une instance de la classe Block avec les instructions obtenues après la visite
         val statements = Block(instructions, ctx.start.line)
 
-        //TODO: créez une instance de la classe Module qui contient le Block avec les instructions
         return Module(statements, ctx.start.line)
     }
 
